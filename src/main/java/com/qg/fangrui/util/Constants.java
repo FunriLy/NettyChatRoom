@@ -13,6 +13,7 @@ public class Constants {
 
     public static final int AUTH_CODe = 10001;
     public static final int MESS_CODE = 10002;
+    public static final int PRIV_CODE = 10003;
     public static final int PING_CODE = 10011;
     public static final int PONG_CODE = 10012;
 

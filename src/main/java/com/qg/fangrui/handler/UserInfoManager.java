@@ -118,6 +118,10 @@ public class UserInfoManager {
         }
     }
 
+    public static void broadcastMessToSomeone(int from, int to, String message){
+        // TODO: 2017/6/23  
+    }
+
     /**
      * 广播系统消息
      * @param code

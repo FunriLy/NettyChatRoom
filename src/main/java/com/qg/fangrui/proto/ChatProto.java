@@ -79,6 +79,11 @@ public class ChatProto {
         return JSONObject.toJSONString(chatProto);
     }
 
+    public static String buildPrivateMessage(int from, String fromNick, int to, String toNick, String mess){
+        // TODO: 2017/6/23  
+        return null;
+    }
+
     public static String buildProto(int head, String body){
         ChatProto chatProto = new ChatProto(head, body);
         return JSONObject.toJSONString(chatProto);

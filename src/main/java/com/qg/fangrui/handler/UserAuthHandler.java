@@ -153,6 +153,8 @@ public class UserAuthHandler extends SimpleChannelInboundHandler<Object> {
             }
             case Constants.MESS_CODE: //普通的消息留给MessageHandler处理
                 break;
+            case Constants.PRIV_CODE: //私聊的消息留给MessageHandler处理
+                break;
             default:
                 logger.warn("The code [{}] can't be auth!!!", code);
                 return;

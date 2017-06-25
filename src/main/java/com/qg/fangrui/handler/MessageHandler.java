@@ -25,6 +25,18 @@ public class MessageHandler extends SimpleChannelInboundHandler<TextWebSocketFra
             // 广播返回用户发送的消息文本
             UserInfoManager.broadcastMess(userInfo.getUserId(), userInfo.getNick(), json.getString("mess"));
         }
+
+        // TODO: 2017/6/23  
+//        if (userInfo != null && userInfo.isAuth()) {
+//            JSONObject json = JSONObject.parseObject(frame.text());
+//            // 判断是聊天消息
+//            if (json.getString("code").equals(String.valueOf(Constants.MESS_CODE))) {
+//                // 广播返回用户发送的消息文本
+//                UserInfoManager.broadcastMess(userInfo.getUserId(), userInfo.getNick(), json.getString("mess"));
+//            } else if (json.getString("code").equals(String.valueOf(Constants.PRIV_CODE))) {
+//
+//            }
+//        }
     }
 
     @Override
