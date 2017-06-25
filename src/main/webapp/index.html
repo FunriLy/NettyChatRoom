@@ -63,6 +63,7 @@
                 在线人数：<span id="userCount" style="color:#fff;">11220</span> 人
             </div>
         </div>
+        <span class="user-list-bt"> < </span>
     </div>
     <div class="row">
         <div id="content">
@@ -80,6 +81,8 @@
             <button id="sendBtn" style="height:40px;width:100%;outline:none;line-height:40px;">send</button>
         </div>
     </div>
+    <ul class="user-list my-hide">
+    </ul>
 </div>
 
 <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
@@ -88,4 +91,36 @@
 <script type="text/javascript" src="http://localhost:8080/chat/bootstrap/js/jquery.qqFace.js"></script>
 <script type="text/javascript" src="http://localhost:8080/chat/bootstrap/js/chat.js"></script>
 </body>
+<script>
+    $(function(){
+        var userList = $('.user-list')
+        $('.user-list-bt').click(function(){
+           if(userList.hasClass('my-hide')){
+                userList.removeClass('my-hide')
+           }else{
+                userList.addClass('my-hide')
+                userList.addClass('my-hide')
+           }
+        })
+
+        $('.user-list').click(function(e){
+            var target = e.target
+            if(target.nodeName.toLocaleUpperCase()==='LI') {
+                alert('傻逼，没功能的！ 哈哈哈')
+            }
+        })
+
+        $("#menuModal").modal({
+            keyboard: false
+        })
+
+        $('#mess').bind('keypress',function(event){
+            if(event.keyCode == "13")
+            {
+                $('#sendBtn').click()
+            }
+            e.preventDefault();
+        });
+    })
+</script>
 </html>

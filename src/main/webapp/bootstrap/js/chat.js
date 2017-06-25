@@ -149,7 +149,14 @@ function sysInvake(data) {
             console.log("system message: " + data.extend.mess);
             break;
         case 20004: // list message 先将在线用户列表打印出来
-            console.log("list message: " + data.extend.mess);
+            console.log("list message: " , data.extend.mess);
+            var userList = $('.user-list')
+            var users = data.extend.mess;
+            userList[0].innerHTML = '';
+            users.forEach(function(user){
+                var userName = user.slice(0,user.indexOf('('))
+                userList.append($('<li>'+userName+'</li>'))
+            })
             break;
     }
 }
